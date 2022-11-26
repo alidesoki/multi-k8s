@@ -1,6 +1,6 @@
-docker build -t alidesoki/multi-client:latest -t alidesoki/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t alidesoki/multi-server:latest -t alidesoki/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t alidesoki/multi-worker:latest -t alidesoki/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t alidesoki/multi-client:latest -t alidesoki/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t alidesoki/multi-server:latest -t alidesoki/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t alidesoki/multi-worker:latest -t alidesoki/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push alidesoki/multi-client:latest
 docker push alidesoki/multi-server:latest
